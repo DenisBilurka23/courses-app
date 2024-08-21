@@ -1,0 +1,176 @@
+.bg {
+  position: absolute;
+}
+
+.bg__left {
+  position: fixed;
+  background: #332F65;
+  opacity: 0.5;
+  filter: blur(103px);
+  transform: rotate(9.41deg);
+  width: 399px;
+  height: 400px;
+  top: -70px;
+  left: -31.33px;
+  z-index: -1;
+}
+
+.bg__right {
+  z-index: -1;
+  position: fixed;
+  width: 790px;
+  height: 793px;
+  right: 0;
+  top: 0;
+  background: #332F65;
+  opacity: 0.8;
+  filter: blur(103px);
+  transform: rotate(9.41deg) translateX(50%) translateY(-40%);
+}
+
+.html {
+  top: 123px;
+  right: -178px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    right: -7px;
+    top: 14px;
+    border-radius: 50%;
+    background: #F16529;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
+.css {
+  top: 209px;
+  right: -89px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    right: 15px;
+    top: -5px;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #2965F1;
+  }
+
+  img {
+    width: 90px;
+  }
+}
+
+.js {
+  right: -192px;
+  top: 280px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    right: -6px;
+    top: 20px;
+    border-radius: 50%;
+    background: #F0BE25;
+    width: 8px;
+    height: 8px;
+  }
+
+  img {
+    width: 90px;
+  }
+}
+
+.sublime {
+  right: -87px;
+  top: 373px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    right: 8px;
+    top: -11px;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #FF9800;
+  }
+
+  img {
+    width: 75px;
+  }
+}
+
+.vscode {
+  right: -168px;
+  top: 446px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    right: -6px;
+    top: 71px;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background: #48AEF3;
+  }
+
+  img {
+    width: 85px;
+  }
+}
+
+.bg__mobile {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .js {
+    display: none;
+  }
+  .html {
+    right: -88px;
+  }
+  .css {
+    top: 243px
+  }
+  .vscode {
+    right: -94px;
+    top: 470px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .sublime, .vscode, .js, .css, .html {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .bg__left, .bg__right {
+    display: none;
+  }
+  .bg__mobile {
+    z-index: -1;
+    display: block;
+    position: fixed;
+    width: 912px;
+    height: 912px;
+    left: -151px;
+    bottom: -540px;
+    background: #332F65;
+    filter: blur(250px);
+  }
+}
+
+

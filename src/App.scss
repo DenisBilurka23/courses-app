@@ -1,0 +1,49 @@
+@import 'variables';
+
+body {
+  background: $background;
+  color: $text;
+  margin: 0;
+  font-family: 'Gilroy', sans-serif;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1040px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.container + main {
+  padding: 6rem 2rem;
+  display: grid;
+  grid-template-columns: minmax(375px, 425px) max-content;
+  grid-auto-flow: row;
+  justify-content: space-between;
+  grid-template-rows: auto;
+  position: relative;
+}
+
+@media (max-width: 1450px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container + main {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .container, .container + main {
+    padding: 1rem 2rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container, .container + main {
+    padding: 1rem;
+  }
+}

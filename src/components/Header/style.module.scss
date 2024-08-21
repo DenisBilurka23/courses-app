@@ -1,0 +1,43 @@
+.header {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin: 0 -.5rem;
+}
+
+.info > div {
+  margin: 0 .5rem;
+  background: #302E5A;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 140px;
+}
+
+.info > div > img, .info > div > span {
+  margin: 0 .175rem;
+}
+
+@media (max-width: 576px) {
+  img {
+    width: 100px;
+  }
+  .info > div {
+    font-size: 11px;
+    line-height: 8.31px;
+    width: 88px;
+    height: 24px;
+  }
+  .info img {
+    width: 13px;
+  }
+}
